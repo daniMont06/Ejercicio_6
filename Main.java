@@ -10,12 +10,12 @@ public class Main {
         
         for (int seguir = 1; seguir == 1; ) {
             // Mostrar menú
-            System.out.println("\n=== SISTEMA AGROTEC ===");
+            System.out.println("\n SISTEMA DE CONTROL DE MAQUINARIA AGRONOMA");
             System.out.println("1) Listar máquinas");
             System.out.println("2) Buscar por ID");
             System.out.println("3) Buscar por nombre");
             System.out.println("4) Ordenar por consumo");
-            System.out.println("5) Operar dispositivo (medir/accionar/registrar)");
+            System.out.println("5) Operar dispositivo");
             System.out.println("0) Salir");
             System.out.print("Opción: ");
 
@@ -29,14 +29,14 @@ public class Main {
 
             // Opciones del menú 
             if (op == 1) {
-                // Listar todas las máquinas (SIEMPRE con ID)
+                // Listar todas las máquinas 
                 for (Maquina m : sistema.getMaquinas()) {
                     System.out.println(lineaConId(m));
                 }
 
             } else if (op == 2) {
                 // Buscar por ID exacto
-                System.out.print("ID: ");
+                System.out.print("ID (es el primer nombre entre corchetes): ");
                 String id = sc.nextLine();
                 Maquina m = sistema.buscarPorId(id);
                 if (m == null) {
